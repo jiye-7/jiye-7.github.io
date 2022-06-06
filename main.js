@@ -18,14 +18,12 @@ const arrowUpBtn = document.querySelector('.arrow-up');
 const selectWorkFilter = document.querySelector('.select-work');
 const tabContents = document.querySelector('#tab_contents');
 const projectCategory = document.querySelector('.project-category');
-const projectDetailContents = document.querySelector('#detail-contents');
 const projectDetail = document.querySelector('#project-detail');
 const projectLinkDiv = document.querySelector('#project-link');
 const projectInfoDiv = document.querySelector('#project-info');
 const projectFunctionDiv = document.querySelector('#project-function');
 const projectStackDiv = document.querySelector('#project-stack');
 const projectImgsDiv = document.querySelector('#project-imgs');
-const navbarName = document.querySelector('.nav-name');
 const mobileNavContainer = document.querySelector('.mobile_nav-container');
 const mobileMenuBtn = document.querySelector('.menu-btn');
 const mobileMenuCancelBtn = document.querySelector('.menu-cancel-btn');
@@ -306,26 +304,35 @@ const handleSelectedFilteredProject = (project) => {
     'tab-contents-box',
     'transition',
     `item-${project.id}`,
-    'sm:w-[320px]',
+    'sm:w-[100%]',
     'sm:bg-purple-100',
-    'lg:w-[400px]',
-    'lg:bg-blue-100'
+    'lg:w-[100%]',
+    'lg:bg-blue-100',
+    'drop-shadow-lg'
   );
   tabContentsCard.setAttribute('id', `${project.id}`);
   h4.classList.add('mb-2', 'font-bold', 'text-[#5680cb]');
   h4.setAttribute('id', `${project.id}`);
-  img.classList.add('w-[260px]', 'h-[120px]', `${project.id}`);
+  img.classList.add('w-[200px]', 'h-[160px]', 'rounded', `${project.id}`);
   img.setAttribute('id', `${project.id}`);
   img.src = project.src;
   img.alt = project.alt;
-  span.classList.add('mt-4', 'text-blue-300', `${project.id}`);
+  span.classList.add('mt-2', 'text-blue-300', `${project.id}`);
   span.setAttribute('id', `${project.id}`);
 
   h4.textContent = project.name;
   span.textContent = project.scale;
 
   tabContentsCard.append(h4, img, span);
-  tabContents.classList.add('sm:grid', 'sm:grid-rows-2');
+  tabContents.classList.add(
+    'sm:w-[90vw]',
+    'sm:grid',
+    'sm:grid-rows-2',
+    'sm:m-2',
+    'web:w-[90%]',
+    'xl:w-[70%]'
+    // '2xl:w-3/5'
+  );
   tabContents.append(tabContentsCard);
 
   return tabContents;
@@ -369,7 +376,7 @@ selectWorkFilter.addEventListener('click', (e) => {
     handleProjectDetailRemove();
   }
 });
-
+//////////////////
 const handleProjectCard = () => {
   projects.map((project) => {
     const tabContentsCard = document.createElement('div');
@@ -380,23 +387,36 @@ const handleProjectCard = () => {
     tabContentsCard.classList.add(
       'tab-contents-box',
       'transition',
-      `item-${project.id}`
+      `item-${project.id}`,
+      'sm:w-[100%]',
+      'sm:bg-purple-100',
+      'lg:w-[100%]',
+      'lg:bg-blue-100',
+      'drop-shadow-lg'
     );
     tabContentsCard.setAttribute('id', `${project.id}`);
     h4.classList.add('mb-2', 'font-bold', 'text-[#5680cb]');
     h4.setAttribute('id', `${project.id}`);
-    img.classList.add('w-[200px]', 'h-[140px]', `${project.id}`);
+    img.classList.add('w-[200px]', 'h-[160px]', 'rounded', `${project.id}`);
     img.setAttribute('id', `${project.id}`);
-    console.log(project.src);
     img.src = project.src;
     img.alt = project.alt;
-    span.classList.add('mt-4', 'text-blue-300', `${project.id}`);
+    span.classList.add('mt-2', 'text-blue-300', `${project.id}`);
     span.setAttribute('id', `${project.id}`);
 
     h4.textContent = project.name;
     span.textContent = project.scale;
 
     tabContentsCard.append(h4, img, span);
+    tabContents.classList.add(
+      'sm:w-[90vw]',
+      'sm:grid',
+      'sm:grid-rows-2',
+      'sm:m-2',
+      'web:w-[90%]',
+      'xl:w-[70%]'
+      // '2xl:w-3/5'
+    );
     tabContents.append(tabContentsCard);
 
     return tabContents;
@@ -550,6 +570,7 @@ const handleMakeProjectDetailPage = (page) => {
         let imgSpan = document.createElement('span');
         imgBox.classList.add('w-60', 'h-44', 'rounded-lg', 'ml-2');
         imgSpan.classList.add('mt-1', 'font-bold', 'block', 'text-center');
+        imgDiv.classList.add('drop-shadow-xl');
         imgBox.src = content.src;
         imgBox.alt = content.alt;
         imgSpan.textContent = content.summary;

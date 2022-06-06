@@ -10,7 +10,7 @@ const projects = [
   },
   {
     name: '스터디 프로젝트',
-    src: '../assets/imgs/portfolio-detail-img6.png',
+    src: '../assets/imgs/hamkke-img.png',
     alt: 'project image',
     scale: '2인 프로젝트',
     state: 1,
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: '칸반보드 프로젝트',
-    src: '../assets/imgs/portfolio-detail-img1.png',
+    src: '../assets/imgs/quokkaboard-img.png',
     alt: 'project image',
     scale: '4인 프로젝트',
     state: 1,
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     name: '키워드 관련 뮤직 추천 프로젝트',
-    src: '../assets/imgs/portfolio-detail-img2.png',
+    src: '../assets/imgs/nodongu-img.png',
     alt: 'project image',
     scale: '4인 프로젝트',
     state: 1,
@@ -40,39 +40,30 @@ const projectData = [
     projectLink: {
       title: '프로젝트 링크',
       link: [
-        ['깃허브 링크', 'https://github.com/jiye-7'],
-        ['배포 링크', 'https://github.com/jiye-7'],
-        ['노션 링크', 'https://github.com/jiye-7'],
+        ['깃허브 링크', 'https://github.com/jiye-7/hamkke-hr-client'],
+        ['배포 링크(개발 중)', 'https://github.com/jiye-7'],
       ],
     },
     introduction: {
       title: '프로젝트 소개',
       contents: [
-        'Hamkke HR 프로젝트는 팀프로젝트 또는 스터디를 같이 진행 할 인원 모집 등의 기능을 제공합니다.',
-        '자유글 형식으로 게시글을 작성할 수 있으며, 글 작성시 기술 스택을 선택하여 원하는 멤버를 모집할 수 있습니다.',
-        '관심있는 글이나 참여를 원할 땐 좋아요 , 댓글 기능 을 이용하여 스터디에 참여할 수 있습니다.',
+        'Hamkke HR 프로젝트는 참여중인 워크스페이스와 설정 기능/입장 기능을 제공합니다.',
+        '관리자 페이지와 팀원의 기능을 차별화하여 제공합니다.',
+        '같은 워크스페이스에 구성원을 등록할 수 있습니다.',
       ],
     },
     function: {
       title: '프로젝트 기능',
       contents: [
-        '최신 게시글 보기',
-        '인기 게시글 보기',
-        '모집 중인글과 모집 마감 된 글 보기',
-        '기술 스택을 선택하여 게시글 보기',
-        '게시글 작성',
-        '좋아요 기능',
-        '댓글 기능',
-        '회원 가입',
-        '마이 페이지 정보 수정',
-        '회원 탈퇴',
-        '내가 작성한 글 목록 보기',
-        '내가 좋아요 한 글 목록 보기',
+        '관리자 페이지',
+        '워크스페이스 생성',
+        '구성원 등록',
+        '기능 추가 예정',
       ],
     },
     stacks: {
       title: '사용 스택',
-      useStack: ['React', 'Redux', '스택3', '스택4'],
+      useStack: ['React', 'redux-saga', 'tailwind css', 's3'],
     },
     picture: {
       title: '주요 기능 화면 캡쳐',
@@ -80,32 +71,32 @@ const projectData = [
         {
           src: '../../assets/imgs/portfolio-detail-img7.png',
           alt: 'main page img',
-          summary: '메인 페이지',
+          summary: '기능 개발 예정',
         },
         {
           src: '../../assets/imgs/portfolio-detail-img6.png',
           alt: 'member info page img',
-          summary: '회원 정보수정',
+          summary: '기능 개발 예정',
         },
         {
           src: '../../assets/imgs/portfolio-detail-img2.png',
           alt: 'summary img',
-          summary: '글 목록 화면',
+          summary: '기능 개발 예정',
         },
         {
           src: '../../assets/imgs/portfolio-detail-img1.png',
           alt: 'summary img',
-          summary: '회원가입',
+          summary: '기능 개발 예정',
         },
         {
           src: '../../assets/imgs/portfolio-detail-img3.png',
           alt: 'summary img',
-          summary: '글 작성 페이지',
+          summary: '기능 개발 예정',
         },
         {
           src: '../../assets/imgs/portfolio-detail-img4.png',
           alt: 'summary img',
-          summary: '스택 선택 화면',
+          summary: '기능 개발 예정',
         },
       ],
     },
@@ -115,9 +106,11 @@ const projectData = [
     projectLink: {
       title: '프로젝트 링크',
       link: [
-        ['깃허브 링크', 'https://github.com/jiye-7'],
-        ['배포 링크', 'https://github.com/jiye-7'],
-        ['노션 링크', 'https://github.com/jiye-7'],
+        [
+          '깃허브 링크',
+          'https://github.com/jiye-7/hamkke-study-platform-client',
+        ],
+        ['배포 링크(배포 예정)', 'https://github.com/jiye-7'],
       ],
     },
     introduction: {
@@ -143,44 +136,55 @@ const projectData = [
         '회원 탈퇴',
         '내가 작성한 글 목록 보기',
         '내가 좋아요 한 글 목록 보기',
+        '로그인 여부에 따른 접근 제한',
       ],
     },
     stacks: {
       title: '사용 스택',
-      useStack: ['React', 'Redux', '스택3', '스택4'],
+      useStack: ['React', 'ReduxHook', '스택3', '스택4'],
     },
     picture: {
       title: '주요 기능 화면 캡쳐',
       contents: [
         {
-          src: '../../assets/imgs/portfolio-detail-img7.png',
+          src: '../../assets/gifs/hamkkestudy/7.recent-hit-post.gif',
           alt: 'main page img',
-          summary: '메인 페이지',
+          summary: '최신/인기글로 검색',
         },
         {
-          src: '../../assets/imgs/portfolio-detail-img6.png',
+          src: '../../assets/gifs/hamkkestudy/8.signup-authcheck.gif',
+          alt: 'summary img',
+          summary: '회원가입/auth check',
+        },
+        {
+          src: '../../assets/gifs/hamkkestudy/4.recruitment-check.gif',
+          alt: 'summary img',
+          summary: '모집 중/모집 마감된 글도 보기',
+        },
+        {
+          src: '../../assets/gifs/hamkkestudy/9.post-write-detailpage.gif',
+          alt: 'summary img',
+          summary: '글 작성/상세 페이지',
+        },
+        {
+          src: '../../assets/gifs/hamkkestudy/5.stack-filtering.gif',
           alt: 'member info page img',
-          summary: '회원 정보수정',
+          summary: '기술 스택으로 검색',
         },
         {
-          src: '../../assets/imgs/portfolio-detail-img2.png',
-          alt: 'summary img',
-          summary: '글 목록 화면',
+          src: '../../assets/gifs/hamkkestudy/6.like-comment-update-delete.gif',
+          alt: 'member info page img',
+          summary: '댓글 쓰기/수정/삭제',
         },
         {
-          src: '../../assets/imgs/portfolio-detail-img1.png',
-          alt: 'summary img',
-          summary: '회원가입',
+          src: '../../assets/gifs/hamkkestudy/post-like-unlike.gif',
+          alt: 'member info page img',
+          summary: '좋아요 추가/취소',
         },
         {
-          src: '../../assets/imgs/portfolio-detail-img3.png',
-          alt: 'summary img',
-          summary: '글 작성 페이지',
-        },
-        {
-          src: '../../assets/imgs/portfolio-detail-img4.png',
-          alt: 'summary img',
-          summary: '스택 선택 화면',
+          src: '../../assets/gifs/hamkkestudy/1.my-write-post,update.gif',
+          alt: 'member info page img',
+          summary: '작성글 수정',
         },
       ],
     },
@@ -193,7 +197,7 @@ const projectData = [
         ['깃허브 링크', 'https://github.com/codestates/quokkaBoard-client'],
         [
           '노션 링크',
-          'https://codestates.notion.site/12-Coco-Quokka-Board-4aa8dd80e08d44758dbaffe7f2a5fc33',
+          'https://distinct-dollar-c6d.notion.site/Quokka-Board-Document-1-fcd790a338a94c2ab9d60ea024206d0c',
         ],
       ],
     },
@@ -223,7 +227,7 @@ const projectData = [
     },
     stacks: {
       title: '사용 스택',
-      useStack: ['React', 'Redux', 'Styled-component', 'PostCSS'],
+      useStack: ['React', 'Redux', 'React-Hook', 'Styled-component', 'PostCSS'],
     },
     picture: {
       title: '주요 기능 화면 캡쳐',
@@ -304,7 +308,7 @@ const projectData = [
     },
     stacks: {
       title: '사용 스택',
-      useStack: ['React', 'ReactRouter'],
+      useStack: ['React', 'React-Hook'],
     },
     picture: {
       title: '주요 기능 화면 캡쳐',

@@ -18,6 +18,8 @@ module.exports = {
       },
       screens: {
         mobile: { min: '320px', max: '639px' },
+        web: { min: '1025px', max: '1279px' },
+        weblg: { min: '1281px' },
       },
       keyframes: {
         'fade-in-down': {
