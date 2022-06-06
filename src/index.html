@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jiye's Portfolio</title>
+    <meta
+      name="description"
+      content="It is a front-end developer Jiye that can develop a web based on JavaScript :)"
+    />
+    <meta name="author" content="Jiye" />
+    <link rel="icon" type="image/png" href="../assets/imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/bd59b22a1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script type="module" src="../main.js" defer></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="w-[100%] h-[70px] bg-transparent" id="navbar">
+      <!-- 웹 & 태블릿 -->
+      <div class="p-4 flex justify-between nav-container mobile:hidden">
+        <div class="flex navbar__left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 fill-amber-400 logo-svg"
+            fill="none"
+            viewBox="0 0 720 520"
+          >
+            <path
+              d="M128 96h384v256h64V80C576 53.63 554.4 32 528 32h-416C85.63 32 64 53.63 64 80V352h64V96zM624 384h-608C7.25 384 0 391.3 0 400V416c0 35.25 28.75 64 64 64h512c35.25 0 64-28.75 64-64v-16C640 391.3 632.8 384 624 384zM365.9 286.2C369.8 290.1 374.9 292 380 292s10.23-1.938 14.14-5.844l48-48c7.812-7.813 7.812-20.5 0-28.31l-48-48c-7.812-7.813-20.47-7.813-28.28 0c-7.812 7.813-7.812 20.5 0 28.31l33.86 33.84l-33.86 33.84C358 265.7 358 278.4 365.9 286.2zM274.1 161.9c-7.812-7.813-20.47-7.813-28.28 0l-48 48c-7.812 7.813-7.812 20.5 0 28.31l48 48C249.8 290.1 254.9 292 260 292s10.23-1.938 14.14-5.844c7.812-7.813 7.812-20.5 0-28.31L240.3 224l33.86-33.84C281.1 182.4 281.1 169.7 274.1 161.9z"
+            />
+          </svg>
+          <a class="nav-name pl-2 font-bold text-amber-400" href="#">Jiye</a>
+        </div>
+        <div class="navbar__right">
+          <ul class="flex navbar__menu"></ul>
+        </div>
+      </div>
+      <!-- 모바일 버전 -->
+      <div
+        class="hidden p-4 mobile_nav-container mobile:block relative z-30 w-[100%] h-[70px] bg-[#ffe0b2] fixed top-0"
+      >
+        <div class="flex navbar__left">
+          <a class="text-2xl pl-2 font-bold text-amber-400 logo-name" href="#"
+            >Jiye</a
+          >
+        </div>
+        <div class="navbar__right">
+          <ul class="flex flex-col items-center mobile_navbar__menu pt-10"></ul>
+          <button class="menu-btn absolute pt-4 pr-4 top-[5px] right-[0px]">
+            <svg
+              class="w-8 h-8 cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="#fbc02d"
+                d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+              />
+            </svg>
+          </button>
+          <button
+            class="hidden menu-cancel-btn absolute pt-4 pr-4 top-[5px] right-[0px]"
+          >
+            <svg
+              class="w-8 h-8 cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                fill="#fff"
+                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Home -->
+    <section id="home" class="bg-home-dark w-full bg-cover bg-no-repeat">
+      <div
+        class="flex flex-col items-center pt-24 pb-14 -mt-20 home__container"
+      >
+        <img
+          class="border-2 border-amber-400 rounded-full home__avatar mobile:w-[200px]"
+          src="../assets/imgs/profile.png"
+          alt="my profile image"
+        />
+        <h1 class="text-center my-6 text-amber-400 home__title mobile:text-xl">
+          반갑습니다. <br />
+          프론트엔드 개발자 유지예 입니다
+          <span>&#128047;</span>
+        </h1>
+        <h2 class="text-center text-orange-300 mb-12 home__description">
+          제 소개페이지에 오신것을 환영합니다!
+        </h2>
+        <button
+          class="text-white font-bold py-2 px-4 rounded bg-orange-200 hover:bg-orange-600 transition ease-in-out delay-300 home__contact"
+        >
+          CONTACT ME
+        </button>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="flex flex-col items-center pb-8 bg-gray-50">
+      <h1 class="pt-16 mb-10 text-center"><span>&#128227;</span> About me</h1>
+      <div
+        class="flex flex-col sm:w-full md:w-full lg:w-3/4 xl:w-3/4 mobile:w-full"
+      >
+        <div class="flex flex-row justify-center pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="#c8e6c9"
+              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
+            />
+          </svg>
+          <p
+            class="bg-[#e8f5e9] rounded ml-2 px-2 pt-1 pl-3 leading-5 basis-3/4 sm:basis-6/7 sm:p-2 md:basis-8/12 mobile:basis-5/6"
+          >
+            자바/타입스크립트와 리액트를 중점으로 프론트엔드 개발이 가능합니다.
+          </p>
+        </div>
+        <div class="flex flex-row justify-center pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="#b2dfdb"
+              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
+            />
+          </svg>
+          <p
+            class="bg-[#e0f2f1] rounded ml-2 px-2 pt-1 pl-3 leading-5 basis-3/4 sm:basis-6/7 sm:p-2 md:basis-8/12 mobile:basis-5/6"
+          >
+            웹디자이너와 프론트엔드 인턴 개발자로 참여한 경험이 있습니다.
+          </p>
+        </div>
+        <div class="flex flex-row justify-center pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="#d1c4e9"
+              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
+            />
+          </svg>
+          <p
+            class="bg-[#ede7f6] rounded ml-2 px-2 pt-1 pl-3 leading-5 basis-3/4 sm:basis-6/7 sm:p-2 md:basis-8/12 mobile:basis-5/6"
+          >
+            개인 프로젝트와 팀 프로젝트를 참여하여 배포한 경험이 있습니다.
+          </p>
+        </div>
+        <div class="flex flex-row justify-center pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="#ffccbc"
+              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
+            />
+          </svg>
+          <p
+            class="bg-pink-100 rounded ml-2 px-2 pt-1 pl-3 leading-5 basis-3/4 sm:basis-6/7 sm:p-2 md:basis-8/12 mobile:basis-5/6"
+          >
+            주도적인 개발을 중요하게 생각하고 실천하려고 노력합니다.
+          </p>
+        </div>
+        <div class="flex flex-row justify-center pb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="#ffcdd2"
+              d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"
+            />
+          </svg>
+          <p
+            class="bg-[#ffebee] rounded ml-2 px-2 pt-1 pl-3 leading-5 w-300 basis-3/4 sm:basis-6/7 sm:p-2 md:basis-8/12 mobile:basis-5/6"
+          >
+            스프린트 단위 개발 경험이 있으며, 애자일 개발 환경을 지향합니다.
+          </p>
+        </div>
+      </div>
+      <article class="flex flex-col items-center my-10 mobile:w-full">
+        <h2 class="mt-8 mb-4">
+          소통하며 주도적으로 개발하는 프론트엔드 개발자
+        </h2>
+        <p class="w-4/5 mobile:w-[90%]">
+          &nbsp;웹개발자가 되기 위해 자바스크립트/타입스크립트와 리액트를
+          중심으로 개발공부하고, 웹 개발의 전체 프로세스를 경험하기 <br />위해
+          부트캠프에 참여하였습니다. &nbsp;개발자는 항상 문제에 대해 생각하면서
+          주도적으로 개발해야 된다고 생각합니다. <br />오류가 발생하면 어떤
+          오류가 발생한 것인지 파악하고, 주도적으로 문제 해결을 위해
+          노력하고있습니다.
+          <br />
+          &nbsp;그리고 개발을 진행하며 스스로에 대한 회고를 하여 나에게
+          부족한것이 무엇인지 어떻게 하면 성장할수 있는지에 대한 고민을 항상
+          하며 개발에 임하고 있습니다.
+          <br />
+        </p>
+      </article>
+      <article
+        class="flex justify-center mt-8 pb-14 sm:w-[90%] xl:w-[65%] w-2/4 mobile:flex mobile:flex-col mobile:justify-start"
+      >
+        <h4
+          class="font-bold underline underline-offset-4 decoration-sky-500 sm:ml-8 md:ml-12 basis-1/12 justify-start mobile:mb-2"
+        >
+          Work
+        </h4>
+        <div class="flex flex-col basis-4/12 about__jobs">
+          <div class="ml-4 job">
+            <p class="font-bold job__name">퍼피레드 프론트엔드 인턴</p>
+            <p class="text-sm text-gray-500 mt-1/2 mb-3 job__period">
+              2021.9 ~ 2021.11
+            </p>
+          </div>
+          <div class="ml-4 job">
+            <p class="font-bold job__name">코드스테이츠 웹 과정 수료</p>
+            <p class="text-sm text-gray-500 mt-1/2 mb-3 job__period">
+              2021.03 ~ 2021.07
+            </p>
+          </div>
+          <div class="ml-4 job">
+            <p class="font-bold job__name">웹디자이너</p>
+            <p class="text-sm text-gray-500 mt-1/2 job__period">
+              2019.09 ~ 2020.02
+            </p>
+            <p class="text-sm text-gray-500 job__period">2018.03 ~ 2019.03</p>
+          </div>
+        </div>
+        <div class="w-1 border-l-4 ml-4 mr-12 md:ml-2"></div>
+        <h4
+          class="font-bold underline underline-offset-4 decoration-sky-500 sm:-ml-4 md:ml-1 lg:ml-12 lg:mr-8 xl:ml-4 basis-1/12 text-center mobile:justify-start mobile:-ml-[170px] mobile:mt-10 mobile:mb-2"
+        >
+          Education
+        </h4>
+        <div class="flex flex-col basis-4/12 about__education">
+          <div class="ml-4 edu">
+            <p class="font-bold edu__name">한양사이버대학교</p>
+            <p class="text-[15px] edu__name--detail">사회복지학/아동학과</p>
+            <p class="text-sm text-gray-500 mt-1/2 mb-3 edu__period">
+              2017.03 ~ 2019.08
+            </p>
+          </div>
+          <div class="ml-4 edu">
+            <p class="font-bold edu__name">배화여자대학교</p>
+            <p class="text-[15px] name--detail">경영과</p>
+            <p class="text-sm text-gray-500 mt-1/2 mb-3 edu__period">
+              2013.03 ~ 2016.02
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- Skills -->
+    <section
+      class="flex flex-col items-center p-16 pb-20 bg-[#fcffee] mobile:w-full mobile:px-6"
+      id="skills"
+    >
+      <h1 class="mb-10">
+        <span class="text-3xl text-gray-700">&#9881;</span>
+        Skills
+      </h1>
+      <h2 class="mb-4">Skills & Attributes</h2>
+      <p class="sm:w-[100%] lg:w-3/4 xl:w-3/4 w-2/4 mb-8 mobile:w-full">
+        <span class="text-orange-900">&#10004;</span> 실전 Git workflow(브랜치
+        전략, 코드 리뷰, 이슈 생성 등)을 이해하고 경험하였습니다.<br />
+        <span class="text-orange-900">&#10004;</span> 프로젝트를 진행하면서
+        스프린트와 스크럼을 경험하였습니다. <br />
+        <span class="text-orange-900">&#10004;</span> Slack, Discord 같은
+        협업툴을 이용하여 팀원들과 소통하였습니다.
+      </p>
+      <div
+        class="flex sm:w-[100%] lg:w-3/4 w-3/4 skillset mobile:flex mobile:flex-col mobile:w-full"
+      >
+        <div class="w-3/5 h-80 p-3 bg-[#321911] skillse__left mobile:w-full">
+          <h3 class="text-center text-white skillset__title">Skills</h3>
+          <div class="px-4 pt-4 skill">
+            <div class="flex justify-between skill_description">
+              <span class="skills-child-el">React</span>
+              <span class="skills-child-el">90%</span>
+            </div>
+            <div class="mt-1 rounded bg-[#795548] skill__bar">
+              <div class="w-[90%] h-2 rounded bg-[#ffb300] skill__value"></div>
+            </div>
+          </div>
+          <div class="px-4 pt-4 skill">
+            <div class="flex justify-between skill_description">
+              <span class="skills-child-el">TypeScript</span>
+              <span class="skills-child-el">85%</span>
+            </div>
+            <div class="mt-1 rounded bg-[#795548] skill__bar">
+              <div class="w-[85%] h-2 rounded bg-[#ffb300] skill__value"></div>
+            </div>
+          </div>
+          <div class="px-4 pt-4 skill">
+            <div class="flex justify-between skill_description">
+              <span class="skills-child-el">Redux</span>
+              <span class="skills-child-el">85%</span>
+            </div>
+            <div class="mt-1 rounded bg-[#795548] skill__bar">
+              <div class="w-[85%] h-2 rounded bg-[#ffb300] skill__value"></div>
+            </div>
+          </div>
+          <div class="px-4 pt-3 skill">
+            <div class="flex justify-between skill_description">
+              <span class="skills-child-el">HTML</span>
+              <span class="skills-child-el">97%</span>
+            </div>
+            <div class="mt-1 rounded bg-[#795548] skill__bar">
+              <div class="w-[97%] h-2 rounded bg-[#ffb300] skill__value"></div>
+            </div>
+          </div>
+          <div class="px-4 pt-4 skill">
+            <div class="flex justify-between skill_description">
+              <span class="skills-child-el">CSS</span>
+              <span class="skills-child-el">97%</span>
+            </div>
+            <div class="mt-1 rounded bg-[#795548] skill__bar">
+              <div class="w-[97%] h-2 rounded bg-[#ffb300] skill__value"></div>
+            </div>
+          </div>
+          <div class="px-4 pt-4 skill">
+            <div class="flex justify-between skill_description">
+              <span class="skills-child-el">Node.js</span>
+              <span class="skills-child-el">75%</span>
+            </div>
+            <div class="mt-1 rounded bg-[#795548] skill__bar">
+              <div class="w-[75%] h-2 rounded bg-[#ffb300] skill__value"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-2/5 h-82 skillset__right mobile:flex mobile:w-full mobile:h-60"
+        >
+          <div class="h-3/5 p-3 bg-[#5d4037] tools mobile:w-2/4">
+            <h3 class="text-center text-white skillset__title">Tools</h3>
+            <ul class="text-center mt-6 tools__list">
+              <li class="skills-child-el"><span>Visual Studio</span></li>
+              <li class="skills-child-el"><span>Adobe PhotoShop</span></li>
+              <li class="skills-child-el"><span>Sublime text</span></li>
+            </ul>
+          </div>
+          <div class="h-2/5 p-2 bg-[#8b6b61] etc mobile:w-2/4 mobile:h-36">
+            <h3 class="text-center text-white skillset__title mobile:pt-1">
+              Etc
+            </h3>
+            <ul class="text-center mt-4 etc__list">
+              <li class="skills-child-el"><span>Git</span></li>
+              <li class="skills-child-el"><span>Slack, Discord</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Work -->
+    <section
+      class="flex flex-col items-center p-16 pb-20 bg-[#f5f7ff]"
+      id="work"
+    >
+      <h1 class="mb-10 mobile:text-blue-900">My work</h1>
+      <h2 class="mb-4 mobile:text-blue-500">Projects</h2>
+      <!-- Project Filter Section -->
+      <div class="flex mt-4 select-work mobile:hidden">
+        <div class="form-check">
+          <input
+            class="form-check-input appearance-none rounded-full w-4 h-4 border border-gray-300 bg-white checked:bg-blue-300 checked:border-blue-300 foucse:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+            type="radio"
+            name="work-select"
+            id="select-all"
+            checked
+          />
+          <label
+            class="form-check-label inline-block text-gray-500 font-bold"
+            for="select-all"
+            id="select-all"
+          >
+            전체
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input appearance-none rounded-full w-4 h-4 border border-gray-300 bg-white checked:bg-blue-300 checked:border-blue-300 foucse:outline-none transition duration-200 ml-4 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+            type="radio"
+            name="work-select"
+            id="select-ongoning"
+          />
+          <label
+            class="form-check-label inline-block text-gray-500 font-bold"
+            for="select-ongoning"
+            id="select-ongoning"
+          >
+            진행 중
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input appearance-none rounded-full w-4 h-4 border border-gray-300 bg-white checked:bg-blue-300 checked:border-blue-300 foucse:outline-none transition duration-200 ml-4 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+            type="radio"
+            name="work-select"
+            id="select-done"
+          />
+          <label
+            class="form-check-label inline-block text-gray-500 font-bold"
+            for="select-done"
+            id="select-done"
+          >
+            완료
+          </label>
+        </div>
+      </div>
+      <!-- Project Tab Section -->
+      <div
+        class="sm:w-screen w-3/4 mt-4 m-10 p-2 rounded border-b mobile:hidden"
+      >
+        <ul class="flex justify-center project-category" id="tabs">
+          <li class="" id="tab-none"></li>
+          <li
+            class="tab-li font-bold bg-[#e0deff] text-gray-500 hover:cursor-pointer"
+            id="hamkke-hr"
+          >
+            Hamkke HR
+          </li>
+          <li
+            class="tab-li font-bold bg-[#e0deff] text-gray-500 hover:cursor-pointer"
+            id="hamkke-study"
+          >
+            Hamkke Study
+          </li>
+          <li
+            class="tab-li font-bold bg-[#e0deff] text-gray-500 hover:cursor-pointer"
+            id="quokka-board"
+          >
+            Quokka Board
+          </li>
+          <li
+            class="tab-li font-bold bg-[#e0deff] text-gray-500 hover:cursor-pointer"
+            id="nodongu"
+          >
+            Nodongu
+          </li>
+        </ul>
+      </div>
+      <div
+        class="sm:flex sm:flex-col lg:grid lg:grid-col2 lg:gap-4 grid grid-cols-2 gap-4 mobile:flex mobile:flex-col"
+        id="tab_contents"
+      ></div>
+      <!-- Selected Project (detail contents) -->
+      <div class="mobile:w-[85vw]" id="detail-contents">
+        <!-- project clicked page -->
+        <div class="" id="project-detail">
+          <button
+            class="mobile-back-btn hidden sm:hidden md:hidden lg:hidden xl:hidden"
+          >
+            프로젝트 목록으로 돌아가기
+          </button>
+          <div class="flex flex-col mb-4" id="project-link"></div>
+          <div class="mb-4" id="project-info"></div>
+          <div class="mb-4" id="project-function"></div>
+          <div class="mb-4" id="project-stack"></div>
+          <div id="project-imgs"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section
+      class="flex flex-col items-center p-20 bg-[#7986cb] text-white mobile:p-8"
+      id="contact"
+    >
+      <h1 class="my-4 contact__title">Let's talk</h1>
+      <h3 class="contact__email">jy522hi@gmail.com</h3>
+      <div class="flex my-2 contact__links mobile:mt-6">
+        <a href="https://github.com/jiye-7" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7 ml-2"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="#fff"
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jiye-yu-084345208/"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7 ml-2"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="#fff"
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+            />
+          </svg>
+        </a>
+        <a href="https://velog.io/@jy777hi" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7 ml-2"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="#fff"
+              d="M399.36,362.23c29.49-34.69,47.1-78.34,47.1-125.79C446.46,123.49,346.86,32,224,32S1.54,123.49,1.54,236.44,101.14,440.87,224,440.87a239.28,239.28,0,0,0,79.44-13.44,7.18,7.18,0,0,1,8.12,2.56c18.58,25.09,47.61,42.74,79.89,49.92a4.42,4.42,0,0,0,5.22-3.43,4.37,4.37,0,0,0-.85-3.62,87,87,0,0,1,3.69-110.69ZM329.52,212.4l-57.3,43.49L293,324.75a6.5,6.5,0,0,1-9.94,7.22L224,290.92,164.94,332a6.51,6.51,0,0,1-9.95-7.22l20.79-68.86-57.3-43.49a6.5,6.5,0,0,1,3.8-11.68l71.88-1.51,23.66-67.92a6.5,6.5,0,0,1,12.28,0l23.66,67.92,71.88,1.51a6.5,6.5,0,0,1,3.88,11.68Z"
+            />
+          </svg>
+        </a>
+      </div>
+      <p class="contact__rigths mobile:text-center mobile:mt-8">
+        2022 My Portfolio - All rights reserved
+      </p>
+    </section>
+    <!-- ArrowUp Button -->
+    <svg
+      class="opacity-0 pointer-events-none h-16 w-16 text-white bg-orange-300 border-8 border-orange-300 rounded-full fixed bottom-[40px] right-[40px] hover:cursor-pointer arrow-up mobile:fixed mobile:bottom-[30px] mobile:right-[20px]"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3"
+        d="M5 10l7-7m0 0l7 7m-7-7v18"
+      />
+    </svg>
+  </body>
+</html>

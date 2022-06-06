@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-size: 32px;
+  --background-color: #efebe9;
+  --base-space: 8px;
+  --text-color: #3e2723;
+}
+
+li {
+  /* margin: calc(var(--base-space) * 4); */
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --font-size: 24px;
+    --background-color: #ccb2a5;
+    --base-space: 4px;
+    --text-color: #573c37;
+  }
+}
+
+@layer base {
+  /* @font-face {
+    font-family: 'Open Sans', sans-serif, 'Pacifico', cursive;
+  } */
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h3 {
+    @apply text-lg font-bold;
+  }
+  /* a {
+    @apply text-blue-600;
+  } */
+}
+
+/* Skill */
+.skills-child-el {
+  @apply text-white text-xs;
+}
+
+/* Work */
+.tab-a {
+  @apply text-gray-500 font-bold hover:text-gray-700;
+}
+
+.tab-li {
+  @apply px-3 py-1 mr-2 rounded;
+}
+
+.tab-contents-box {
+  @apply w-[380px] h-[240px] flex flex-col items-center rounded bg-blue-100 justify-center transition duration-300 hover:scale-105 cursor-pointer;
+}

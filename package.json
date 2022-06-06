@@ -1,0 +1,23 @@
+{
+  "name": "my_portfolio",
+  "version": "1.0.0",
+  "description": "my portfolio projects",
+  "main": "main.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiye-7/my_portfolio.git"
+  },
+  "keywords": [],
+  "author": "jiye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiye-7/my_portfolio/issues"
+  },
+  "homepage": "https://github.com/jiye-7/my_portfolio#readme",
+  "dependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
