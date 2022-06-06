@@ -13,8 +13,8 @@ module.exports = {
         sans: ['Open Sans', 'sans-serif', 'Pacifico', 'cursive'],
       },
       backgroundImage: {
-        'home-light': "url('../imgs/home_background_light.png')",
-        'home-dark': "url('../imgs/home_background_dark.png')",
+        'home-light': "url('../assets/imgs/home_background_light.png')",
+        'home-dark': "url('../assets/imgs/home_background_dark.png')",
       },
       screens: {
         mobile: { min: '320px', max: '639px' },
